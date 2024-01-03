@@ -9,43 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SignalRDemo3ytEFC
 build_property.RootNamespace = SignalRDemo3ytEFC
-build_property.ProjectDir = C:\Users\HP\Desktop\SignalR_RealTimeTableData\SignalRDemo3ytEFC\
+build_property.ProjectDir = /Users/home/Desktop/mvcrealtime/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\HP\Desktop\SignalR_RealTimeTableData\SignalRDemo3ytEFC
+build_property.MSBuildProjectDirectory = /Users/home/Desktop/mvcrealtime
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Dashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+[/Users/home/Desktop/mvcrealtime/Views/Dashboard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/Users/home/Desktop/mvcrealtime/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/Users/home/Desktop/mvcrealtime/Views/Dashboard/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL0luZGV4Mi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/Users/home/Desktop/mvcrealtime/Views/Dashboard/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL1ZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/Users/home/Desktop/mvcrealtime/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/Users/home/Desktop/mvcrealtime/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/Users/home/Desktop/mvcrealtime/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/SignalR_RealTimeTableData/SignalRDemo3ytEFC/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-yg7fmw70f0
+[/Users/home/Desktop/mvcrealtime/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/home/Desktop/mvcrealtime/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/home/Desktop/mvcrealtime/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/home/Desktop/mvcrealtime/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-p2nbijl8kn
