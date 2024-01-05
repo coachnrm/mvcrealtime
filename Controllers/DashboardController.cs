@@ -2,16 +2,19 @@
 using Microsoft.EntityFrameworkCore;
 using SignalRDemo3ytEFC.Data;
 using SignalRDemo3ytEFC.Models;
+using SignalRDemo3ytEFC.Reports;
 
 namespace SignalRDemo3ytEFC.Controllers
 {
     public class DashboardController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _oHostEnvironment;
 
-        public DashboardController(ApplicationDbContext context)
+        public DashboardController(ApplicationDbContext context, IWebHostEnvironment oHostEnvironment)
         {
             _context = context;
+            _oHostEnvironment = oHostEnvironment;
         }
         public IActionResult Index()
         {
@@ -100,5 +103,6 @@ namespace SignalRDemo3ytEFC.Controllers
             }
             return RedirectToAction("Index");
         }
+        
     }
 }

@@ -3,6 +3,7 @@
 @{
 }
 
+<script src="~/lib/jquery/dist/jquery.js"></script>
 <h1>Edit Product</h1>
 <hr />
 <form method="post" action="View" class="mt-5">
@@ -24,4 +25,11 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Dashboard">Delete</button>
+    <button id="btnpdf2">Print PDF</button>
 </form>
+
+<script type="text/javascript">
+    $("#btnPdf2").click(function () {
+        window.open("../Dashboard/PrintProduct?param=1", "_blank");
+    });
+</script>
