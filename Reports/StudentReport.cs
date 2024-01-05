@@ -22,8 +22,6 @@ namespace SignalRDemo3ytEFC.Reports
         Font _fontStyle;
         MemoryStream _memoryStream = new MemoryStream();
         List<Student> _students = new List<Student>();
-
-        List<Product> _products = new List<Product>();
         #endregion
 
         public StudentReport(IWebHostEnvironment oHostEnvironment)
@@ -31,10 +29,9 @@ namespace SignalRDemo3ytEFC.Reports
             _oHostEnvironment = oHostEnvironment;
         }
 
-        public byte[] Report(List<Student> students, List<Product> products)
+        public byte[] Report(List<Student> students)
         {
             _students = students;
-            _products = products;
 
             _document = new Document(PageSize.A4, 10f, 10f, 20f, 30f);
             _pdfPTable.WidthPercentage = 100;
@@ -171,29 +168,6 @@ namespace SignalRDemo3ytEFC.Reports
                 _pdfPTable.AddCell(_pdfPCell);
 
                 _pdfPCell = new PdfPCell(new Phrase(student.Roll, _fontStyle));
-                _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                _pdfPCell.BackgroundColor = BaseColor.White;
-                _pdfPTable.AddCell(_pdfPCell);
-
-                _pdfPTable.CompleteRow();
-            }
-
-            foreach (var product in _products)
-            {
-                _pdfPCell = new PdfPCell(new Phrase(nSL++.ToString(), _fontStyle));
-                _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                _pdfPCell.BackgroundColor = BaseColor.White;
-                _pdfPTable.AddCell(_pdfPCell);
-
-                _pdfPCell = new PdfPCell(new Phrase(product.Name, _fontStyle));
-                _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
-                _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
-                _pdfPCell.BackgroundColor = BaseColor.White;
-                _pdfPTable.AddCell(_pdfPCell);
-
-                _pdfPCell = new PdfPCell(new Phrase(product.Category, _fontStyle));
                 _pdfPCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 _pdfPCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                 _pdfPCell.BackgroundColor = BaseColor.White;

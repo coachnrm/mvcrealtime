@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.JSInterop;
+using SignalRDemo3ytEFC.Data;
 using SignalRDemo3ytEFC.Models;
 using SignalRDemo3ytEFC.Reports;
 using System.Diagnostics;
+using SignalRDemo3ytEFC.Repositories;
 
 namespace SignalRDemo3ytEFC.Controllers
 {
@@ -10,11 +12,13 @@ namespace SignalRDemo3ytEFC.Controllers
     {
         private readonly IWebHostEnvironment _oHostEnvironment;
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment oHostEnvironment)
+        public HomeController(ILogger<HomeController> logger, IWebHostEnvironment oHostEnvironment, ApplicationDbContext context)
         {
             _logger = logger;
             _oHostEnvironment = oHostEnvironment;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -46,20 +50,8 @@ namespace SignalRDemo3ytEFC.Controllers
                 });
             }
 
-            List<Product> products = new List<Product>();
-            for (int i =1; i <=9; i++)
-            {
-                products.Add(new Product()
-                {
-                    Id = i,
-                    Name = "x",
-                    Category = "x",
-                    Price = 400
-                });
-            }
-
             StudentReport rpt = new StudentReport(_oHostEnvironment);
-            return File(rpt.Report(students, products), "application/pdf");
+            return File(rpt.Report(students), "application/pdf");
         }
 
     }
