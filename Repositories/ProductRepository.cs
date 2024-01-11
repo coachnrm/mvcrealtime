@@ -27,5 +27,18 @@ namespace SignalRDemo3ytEFC.Repositories
             //var f = dbContext.Product.ToList();
             return prodList;
         }
+
+         public List<ProductForGraph> GetProductsForGraph()
+        {
+            List<ProductForGraph> productsForGraph = new List<ProductForGraph>();
+
+            productsForGraph = dbContext.Product.GroupBy(p => p.Category)
+                .Select(g => new ProductForGraph
+                {
+                                Category = g.Key,
+                                Products = g.Count()
+                            }).ToList();
+            return productsForGraph;
+        }
     }
 }

@@ -39,6 +39,133 @@ function BindProductsToGrid(products) {
 	});
 }
 
+connection.on("ReceivedProductsForGraph", function (productsForGraph) {
+	BindProductsToGraph(productsForGraph);
+});
+
+function BindProductsToGraph(productsForGraph) {
+	var labels = [];
+	var data = [];
+	debugger;
+	$.each(productsForGraph, function (index, item) {
+		labels.push(item.category);
+		data.push(item.products);
+	});
+
+	DestroyCanvasIfExists('canvasProudcts');
+
+	const context = $('#canvasProudcts');
+	const myChart = new Chart(context, {
+		type: 'doughnut',
+		data: {
+			labels: labels,
+			datasets: [{
+				label: '# of Products',
+				data: data,
+				backgroundColor: backgroundColors,
+				borderColor: borderColors,
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+}
+
+connection.on("ReceivedProductsForGraph", function (productsForGraph) {
+	ChartGraph(productsForGraph);
+});
+
+function ChartGraph(productsForGraph) {
+	var labels = [];
+	var data = [];
+
+	$.each(productsForGraph, function (index, item) {
+		labels.push(item.category);
+		data.push(item.products);
+	});
+
+	DestroyCanvasIfExists('canvasChart');
+
+	const context = $('#canvasChart');
+	const myChart = new Chart(context, {
+		type: 'line',
+		data: {
+			labels: labels,
+			datasets: [{
+				label: '#Chart of Products',
+				data: data,
+				backgroundColor: backgroundColors,
+				borderColor: borderColors,
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+}
+
+
+connection.on("ReceivedProductsForGraph", function (productsForGraph) {
+	BindCustomersToGraph(productsForGraph);
+});
+
+function BindCustomersToGraph(productsForGraph) {
+	var datasets = [];
+	var labels = ['Products']
+	var data = [];
+	$.each(productsForGraph, function (index, item) {
+		data = [];
+		data.push(item.products);
+
+		var dataset = {
+			label: item.category,
+			data: data,
+			backgroundColor: backgroundColors[index],
+			borderColor: borderColors[index],
+			borderWidth: 1
+		};
+
+		datasets.push(dataset);
+	});
+
+	DestroyCanvasIfExists('canvasBarGraph');
+
+	const context = $('#canvasBarGraph');
+	const myChart = new Chart(context, {
+		type: 'bar',
+		data: {
+			labels: labels,
+			datasets: datasets,
+		},
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		}
+	});
+}
+
+// supporting functions for Graphs
+function DestroyCanvasIfExists(canvasId) {
+	let chartStatus = Chart.getChart(canvasId);
+	if (chartStatus != undefined) {
+		chartStatus.destroy();
+	}
+}
+
 
 var backgroundColors = [
 	'rgba(255, 99, 132, 0.2)',

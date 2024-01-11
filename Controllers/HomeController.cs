@@ -5,6 +5,8 @@ using SignalRDemo3ytEFC.Models;
 using SignalRDemo3ytEFC.Reports;
 using System.Diagnostics;
 using SignalRDemo3ytEFC.Repositories;
+using SelectPdf;
+using Microsoft.EntityFrameworkCore;
 
 namespace SignalRDemo3ytEFC.Controllers
 {
@@ -50,9 +52,15 @@ namespace SignalRDemo3ytEFC.Controllers
                 });
             }
 
+            List<UpdateProductViewModel> products = new List<UpdateProductViewModel>();
+            UpdateProductViewModel product = new UpdateProductViewModel();
+            for (int i=1; i <=6; i++)
+            {
+                
+            }
+
             StudentReport rpt = new StudentReport(_oHostEnvironment);
             return File(rpt.Report(students), "application/pdf");
         }
-
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Crypto.Agreement;
+using SelectPdf;
 using SignalRDemo3ytEFC.Data;
 using SignalRDemo3ytEFC.Models;
 using SignalRDemo3ytEFC.Reports;
@@ -67,7 +69,7 @@ namespace SignalRDemo3ytEFC.Controllers
                 return await Task.Run(() => View("View", viewModel));
             }
 
-            return RedirectToAction("Index2");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -103,6 +105,8 @@ namespace SignalRDemo3ytEFC.Controllers
             }
             return RedirectToAction("Index");
         }
+
+
         
     }
 }

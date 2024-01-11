@@ -3,10 +3,17 @@
 }
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
-<button id="btnPdf">Generate Student Report</button>
+<button id="btnPdf" class="btn btn-primary">Generate Student Report</button>
+
+
+<div id="pdfContainer" style="text-align:center">
+    <h2>สำนักงานดิจิทัลทางการแพทย์</h2>
+</div>
 
 <script type="text/javascript">
     $("#btnPdf").click(function () {
         window.open("../Home/PrintStudent?param=1", "_blank");
     });
 </script>
+
+

@@ -20,6 +20,9 @@ namespace SignalRDemo3ytEFC.Hubs
         {
             var products = productRepository.GetProducts();
             await Clients.All.SendAsync("ReceivedProducts", products);
+
+            var productsForGraph = productRepository.GetProductsForGraph();
+            await Clients.All.SendAsync("ReceivedProductsForGraph", productsForGraph);
         }
     }
 }

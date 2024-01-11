@@ -10,4 +10,11 @@ namespace SignalRDemo3ytEFC.Models
         public string Category { get; set; } = string.Empty;
         public decimal Price { get; set; } = decimal.Zero;
     }
+
+    public class ProductForGraph
+    {
+        public string Category {get; set;}
+
+        public int Products {get; set;}
+    }
 }
